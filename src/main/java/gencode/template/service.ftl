@@ -1,7 +1,7 @@
 package ${packpath!}service;
 
 import java.util.List;
-import com.wrsj.yt.core.common.model.CommPager;
+import com.weds.framework.core.common.model.CommPager;
 import ${packpath!}api.model.${className};
 /**
  * 对${className}实体进行CRUD操作

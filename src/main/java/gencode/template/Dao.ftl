@@ -2,7 +2,7 @@ package ${packpath!}dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
-import com.wrsj.yt.core.annotation.MyBatisDao;
+import com.weds.framework.core.annotation.MyBatisDao;
 import ${packpath!}model.${className!};
 
 /**

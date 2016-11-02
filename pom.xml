@@ -385,27 +385,27 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd"
 			</resource>
 		</resources>
 	</build>
-	<!-- 下载jar包的远程仓库地址 -->
-	<!-- <repositories>
+	
+	<repositories>
 		<repository>
-			<id>Maven Central</id>
-			<name>Maven Central</name>
-			<url>http://repo1.maven.org/maven2/</url>
-			<layout>default</layout>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://10.0.0.82:8081/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
-		<repository>
-			<id>cloudera</id>
-			<name>cloudera</name>
-			<url>https://repository.cloudera.com/content/groups/cloudera-repos/</url>
-			<layout>default</layout>
-		</repository>
-		<repository>
-			<id>umd</id>
-			<name>umd</name>
-			<url>http://maven.lib.umd.edu/maven2/</url>
-			<layout>default</layout>
-		</repository>
-	</repositories> -->
+	</repositories>
+	  <pluginRepositories>
+        <pluginRepository>
+             <id>nexus</id>
+             <name>nexus</name>
+             <url>http://10.0.0.82:8081/nexus/content/groups/public/</url>
+         </pluginRepository>
+     </pluginRepositories>
 	<distributionManagement>
 		<repository>
 			<id>weds-release</id>

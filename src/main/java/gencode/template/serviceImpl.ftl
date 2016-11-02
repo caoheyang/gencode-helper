@@ -8,7 +8,7 @@ import ${packpath}model.${className};
 import ${packpath!}dao.${className}Dao;
 <#if methodStr?index_of("searchPager_")!=-1>
 import com.github.pagehelper.PageHelper;
-import com.wrsj.yt.core.common.model.CommPager;
+import com.weds.framework.core.common.model.CommPager;
 </#if>
 /**
  * 对${className}实体进行CRUD操作<#assign a=id?split("@")/>
