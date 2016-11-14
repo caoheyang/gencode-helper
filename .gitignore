@@ -4,3 +4,6 @@
 target
 .classpath
 .idea
+/.metadata
+/target/
+/bin/

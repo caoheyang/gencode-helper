@@ -6,7 +6,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gencode</groupId>
 	<artifactId>gencode-helper</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<name>gencode-helper</name>
 	<url>http://maven.apache.org</url>
@@ -376,6 +376,18 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd"
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 		<resources>
