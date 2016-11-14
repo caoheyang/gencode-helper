@@ -53,30 +53,37 @@ public class ColumnChangeTypeUtil {
 	 * @param ctitle
 	 * @return
 	 * 得到生成的java列名
+	 * 
+	 * @author  caoheyang
+	 *
 	 */
 	public static String getJavaName(String ctitle){
-		String temp = "";
-		String[] cns = StringUtils.split(ctitle, "_");
-		boolean fg = false;
-		for(int a = 0;a<cns.length;a++){
-			String c = cns[a];
-			if(a==0){
-				if(c.length()==1){
-					fg = true;
-					temp = temp+c.toLowerCase();
-				}else{
-					temp = temp+CharUpperLowerUtil.toLowerCaseFirstOne(c);
-				}
-			}else{
-				if(fg && a==1){
-					temp = temp+CharUpperLowerUtil.toLowerCaseFirstOne(c);
-				}else{
-					temp =temp + CharUpperLowerUtil.toUpperCaseFirstOne(c);
-				}
-			}
-			
-		}
-		return temp;
+		
+		//TODO 注释里的代码功能是，如果数据库里的列含有_,生成实体类的时候去掉"_"
+		
+//		String temp = "";
+//		String[] cns = StringUtils.split(ctitle, "_");
+//		boolean fg = false;
+//		for(int a = 0;a<cns.length;a++){
+//			String c = cns[a];
+//			if(a==0){
+//				if(c.length()==1){
+//					fg = true;
+//					temp = temp+c.toLowerCase();
+//				}else{
+//					temp = temp+CharUpperLowerUtil.toLowerCaseFirstOne(c);
+//				}
+//			}else{
+//				if(fg && a==1){
+//					temp = temp+CharUpperLowerUtil.toLowerCaseFirstOne(c);
+//				}else{
+//					temp =temp + CharUpperLowerUtil.toUpperCaseFirstOne(c);
+//				}
+//			}
+//			
+//		}
+//		return temp;
+		return ctitle;
 	}
 	
 	/**
